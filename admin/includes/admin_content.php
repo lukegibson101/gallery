@@ -10,20 +10,21 @@
 
 
             <?php
-                $sql = "SELECT * FROM users WHERE id=1";
-                $result = $database->query($sql);
-                $user = mysqli_fetch_array($result);
-                echo $user['username'];
+                $result_set = User::find_all_users();
+
+                while($row = mysqli_fetch_array($result_set)) {
+                    echo $row['first_name'] . "<br>";
+                }
             ?>
 
-            <ol class="breadcrumb">
+            <ul class="breadcrumb">
                 <li>
                     <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                 </li>
                 <li class="active">
                     <i class="fa fa-file"></i> Blank Page
                 </li>
-            </ol>
+            </ul>
         </div>
     </div>
     <!-- /.row -->
