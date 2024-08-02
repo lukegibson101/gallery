@@ -15,6 +15,9 @@
                 while($row = mysqli_fetch_array($result_set)) {
                     echo $row['first_name'] . "<br>";
                 }
+
+                $user = User::find_user_by_id(1);
+                echo $user['first_name'];
             ?>
 
             <ul class="breadcrumb">
