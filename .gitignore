@@ -2,4 +2,4 @@
 .DS_store
 
 # Ignore config file
-/admin/includes/config.php
+/admin/includes/new_config.php
