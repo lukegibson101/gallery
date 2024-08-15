@@ -8,7 +8,7 @@ class Session {
     function __construct() {
         session_start();
         $this->check_the_login();
-        $this->check_mesage();
+        $this->check_message();
     }
 
     public function message($msg = "") {

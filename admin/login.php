@@ -1,7 +1,5 @@
 <?php require_once('includes/header.php'); ?>
 
-<?php $the_message = ''; ?>
-
 <?php
 
     if($session->is_signed_in()) {
@@ -26,6 +24,8 @@
 
 
     } else {
+
+        $the_message = '';
         $username = '';
         $password = '';
     }
