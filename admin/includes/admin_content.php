@@ -23,8 +23,18 @@
 //
 //            $user->update();
 
-            $user = User::find_user_by_id(4);
-            $user->delete();
+//            $user = User::find_user_by_id(3);
+//            $user->delete();
+
+//            $user = User::find_user_by_id(2);
+//            $user->last_name = "WHATEVER";
+//            $user->save();
+
+//            $user = new User();
+//            $user->username = "HELLO";
+//            $user->save();
+
+
             ?>
 
             <ul class="breadcrumb">
