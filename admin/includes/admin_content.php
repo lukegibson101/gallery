@@ -10,15 +10,15 @@
 
 
             <?php
-//            $user = new User();
-//            $user->username = "gibbo the second";
-//            $user->password = "123";
-//            $user->first_name = 'Luke';
-//            $user->last_name = 'Gibson';
-//
-//            $user->create()
+            $user = new User();
+            $user->username = "gibbo the third";
+            $user->password = "123";
+            $user->first_name = 'Luke';
+            $user->last_name = 'Gibson';
 
-//            $user = User::find_user_by_id(1);
+            $user->create()
+//
+//            $user = User::find_user_by_id(7);
 //            $user->last_name = "Williams";
 //
 //            $user->update();
