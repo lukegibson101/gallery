@@ -34,6 +34,11 @@
 //            $user->username = "HELLO";
 //            $user->save();
 
+//            $users = User::find_all();
+//            foreach ($users as $user) {
+//                echo $user->username . "<br>";
+//            }
+
 
             ?>
 
