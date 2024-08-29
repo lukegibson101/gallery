@@ -34,10 +34,21 @@
 //            $user->username = "HELLO";
 //            $user->save();
 
-            $users = User::find_all();
-            foreach ($users as $user) {
-                echo $user->username . "<br>";
-            }
+//            $users = User::find_all();
+//            foreach ($users as $user) {
+//                echo $user->username . "<br>";
+//            }
+
+//            $photo = new Photo;
+//            $photo->title = "A Photo from the mountains";
+//            $photo->size = 20;
+//            $photo->create();
+
+
+//            $photos = Photo::find_all();
+//            foreach ($photos as $photo) {
+//                echo $photo->title . "<br>";
+//            }
 
 
             ?>
