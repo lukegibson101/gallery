@@ -50,6 +50,7 @@
 //                echo $photo->title . "<br>";
 //            }
 
+            echo INCLUDES_PATH;
 
             ?>
 
