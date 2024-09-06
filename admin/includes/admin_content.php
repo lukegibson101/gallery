@@ -26,9 +26,10 @@
 //            $user = User::find_user_by_id(3);
 //            $user->delete();
 
-//            $user = User::find_user_by_id(2);
+//            $user = User::find_by_id(2);
 //            $user->last_name = "WHATEVER";
 //            $user->save();
+//            echo "<br>".$user->first_name."<br>";
 
 //            $user = new User();
 //            $user->username = "HELLO";

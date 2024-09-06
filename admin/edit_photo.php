@@ -1,20 +1,11 @@
 <?php include("includes/header.php"); ?>
+
 <?php if(!$session->is_signed_in()) { redirect('login.php'); } ?>
 
 <?php
-    $message = "";
 
-    if(isset($_POST['submit'])) {
-        $photo = new Photo();
-        $photo->title = $_POST['title'];
-        $photo->set_file($_FILES['file_upload']);
+//$photos = Photo::find_all();
 
-        if($photo->savE()) {
-            $message = "Photo uploaded successfully";
-        } else {
-            $message = join("<br>", $photo->errors);
-        }
-    }
 ?>
 
     <!-- Navigation -->
@@ -39,22 +30,28 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Upload
+                        Photos
                         <small>Subheading</small>
                     </h1>
 
-                    <div class="col-md-6">
-                        <?= $message ?>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <input type="text" name="title" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="file" name="file_upload">
-                            </div>
-                            <input type="submit" name="submit">
-                        </form>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="caption">Captions</label>
+                            <input type="text" name="captions" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="caption">Alternate Text</label>
+                            <input type="text" name="alternate_text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="caption">Description</label>
+                            <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
                     </div>
+
                 </div>
             </div>
             <!-- /.row -->
