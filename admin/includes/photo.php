@@ -9,15 +9,19 @@ class Photo extends Db_object {
         'description',
         'filename',
         'type',
-        'size'
+        'size',
+        'alternate_text',
+        'caption'
     ];
 
     public $id;
     public $title;
-    public $descriptipn;
+    public $description;
     public $filename;
     public $type;
     public $size;
+    public $alternate_text;
+    public $caption;
 
     public $tmp_path;
     public $errors = [];
