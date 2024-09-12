@@ -50,7 +50,7 @@ $users = User::find_all();
                                 <tr>
                                     <td><?= $user->id ?></td>
                                     <td>
-                                        <img class="admin-user-thumbnail" src="<?= $user->user_image ?>" alt="">
+                                        <img class="admin-user-thumbnail user_image" src="<?= $user->image_path_and_placeholder() ?>" alt="">
                                     </td>
                                     <td>
                                         <?= $user->username ?>

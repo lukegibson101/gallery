@@ -3,6 +3,11 @@
     border-radius: 5px;
 }
 
+.user_image {
+    width: 62px;
+    height: auto;
+}
+
 /*Edit Photo Page Side Bar Styles*/
 .photo-info-box {
 
