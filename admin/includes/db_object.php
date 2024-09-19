@@ -140,6 +140,16 @@ class Db_object {
 
     }
 
+    public static function count_all() {
+        global $database;
+
+        $sql = "SELECT COUNT(*) FROM " . static::$db_table;
+        $result_set = $database->query($sql);
+        $row = mysqli_fetch_array($result_set);
+
+        return array_shift($row);
+    }
+
     public array $upload_errors_array = [
         UPLOAD_ERR_OK => "There is no error",
         UPLOAD_ERR_INI_SIZE => "The uploaded file exceeds the upload_max_filesize directive in php.ini",
