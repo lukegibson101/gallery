@@ -43,6 +43,7 @@ $photos = Photo::find_all();
                                     <th>Filename</th>
                                     <th>Title</th>
                                     <th>Size</th>
+                                    <th>Comments</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -50,10 +51,10 @@ $photos = Photo::find_all();
                                     <tr>
                                         <td>
                                             <img class="admin-photo-thumbnail" src="<?= $photo->picture_path() ?>" alt="">
-                                            <div class="pictures_link">
+                                            <div class="action_links">
                                                 <a href="delete_photo.php?id=<?= $photo->id ?>">Delete</a>
                                                 <a href="edit_photo.php?id=<?= $photo->id ?>">Edit</a>
-                                                <a href="#">View</a>
+                                                <a href="../photo.php?id=<?= $photo->id ?>">View</a>
                                             </div>
 
 
@@ -62,6 +63,21 @@ $photos = Photo::find_all();
                                         <td><?= $photo->filename ?></td>
                                         <td><?= $photo->title ?></td>
                                         <td><?= $photo->size ?></td>
+                                        <td>
+                                            <?php
+                                                $comments = Comment::find_the_comments($photo->id);
+                                                $comments_count = count($comments);
+                                            ?>
+                                            <?php if ($comments_count > 0): ?>
+                                                <a href="comment_photo.php?id=<?= $photo->id ?>">
+                                                    <div class="btn btn-primary">
+                                                        View (<?= count($comments) ?>)
+                                                    </div>
+                                                </a>
+                                            <?php else: ?>
+                                                No Comments
+                                            <?php endif; ?>
+                                        </td>
                                     </tr>
                                     <?php endforeach; ?>
                             </tbody>
