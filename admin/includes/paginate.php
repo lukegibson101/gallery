@@ -12,11 +12,11 @@ class Paginate {
     }
 
     public function next() {
-        return $this->current_page++;
+        return $this->current_page+1;
     }
 
     public function previous() {
-        return $this->current_page--;
+        return $this->current_page-1;
     }
 
     public function page_total() {
