@@ -1,4 +1,5 @@
 <?php include("includes/header.php"); ?>
+<?php include("includes/photo_library_modal.php"); ?>
 
 <?php if(!$session->is_signed_in()) { redirect('login.php'); } ?>
 
@@ -63,7 +64,9 @@ if(isset($_POST['update'])) {
                     </h1>
                     
                     <div class="col-md-6">
-                        <img class="img-responsive" src="<?= $user->image_path_and_placeholder() ?>" alt="User image">
+                        <a href="#" data-toggle="modal" data-target="#photo-library">
+                            <img class="img-responsive" src="<?= $user->image_path_and_placeholder() ?>" alt="User image">
+                        </a>
                     </div>
 
                     <form action="" method="post" enctype="multipart/form-data">
