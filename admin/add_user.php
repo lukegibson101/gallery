@@ -15,7 +15,10 @@ if(isset($_POST['create'])) {
 
         echo $user->username;
         $user->set_file($_FILES['user_image']);
-        $user->save_user_and_image();
+        $user->upload_photo();
+        $user->save();
+        $session->message("The user has been added");
+        redirect("users.php");
     }
 }
 

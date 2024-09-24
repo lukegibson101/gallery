@@ -33,6 +33,7 @@ $comments = Comment::find_the_comments($_GET['id']);
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
+                    <p class="bg-success"><?= $message ?></p>
                     <h1 class="page-header">
                         Comments
                     </h1>

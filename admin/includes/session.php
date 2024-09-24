@@ -11,22 +11,13 @@ class Session {
         $this->visitor_count();
         $this->check_the_login();
         $this->check_message();
-
     }
 
-    public function visitor_count() {
-        if (isset($_SESSION['count'])) {
-            return $this->count = $_SESSION['count']++;
-        } else {
-            return $_SESSION['count'] = 1;
-        }
-    }
-
-    public function message($msg = "") {
+    public function message($msg="") {
         if(!empty($msg)) {
             $_SESSION['message'] = $msg;
         } else {
-            $this->message = "";
+            return $this->message;
         }
     }
 
@@ -39,7 +30,13 @@ class Session {
         }
     }
 
-
+    public function visitor_count() {
+        if (isset($_SESSION['count'])) {
+            return $this->count = $_SESSION['count']++;
+        } else {
+            return $_SESSION['count'] = 1;
+        }
+    }
 
     public function is_signed_in() {
         return $this->signed_in;
@@ -71,3 +68,4 @@ class Session {
 }
 
 $session = new Session();
+$message = $session->message();

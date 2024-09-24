@@ -32,7 +32,9 @@ if(isset($_POST['update'])) {
             $user->upload_photo();
         }
         $user->save();
-        redirect("edit_user.php?id={$user->id}");
+        $session->message("The user has been updated");
+//        redirect("edit_user.php?id={$user->id}");
+        redirect("users.php");
     }
 }
 
